@@ -4,6 +4,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import { ErrorMiddleware } from "./middleware/error";
 import userRouter from "./routes/user.route";
+import courseRouter from "./routes/course.route";
 
 require("dotenv").config();
 
@@ -20,7 +21,7 @@ app.use(
     // credentials: true
   })
 );
-app.use("/api/v1/", userRouter);
+app.use("/api/v1/", userRouter, courseRouter);
 
 // testing api
 app.get("/test", (req: Request, res: Response, next: NextFunction) => {
