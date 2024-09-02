@@ -19,7 +19,7 @@ app.use(
     // credentials: true
   })
 );
-app.use("/api/v1/");
+// app.use("/api/v1/");
 
 // testing api
 app.get("/test", (req: Request, res: Response, next: NextFunction) => {
